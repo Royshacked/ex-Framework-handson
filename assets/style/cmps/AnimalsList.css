@@ -1,0 +1,19 @@
+.animals-list {
+    width: 100%;
+    padding: 0.5em;
+}
+
+.animals-list table th,td {
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+.animals-list table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.animals-list table a:hover {
+    color:blue;
+}

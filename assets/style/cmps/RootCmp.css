@@ -1,0 +1,25 @@
+
+.root-cmp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: 1em;
+
+    background-color: rgb(239, 230, 230);
+}
+
+.root-cmp nav a {
+    padding-inline: 0.5em;
+    padding-block: 0.3em;
+}
+
+.root-cmp nav a {
+    border-inline-end: 1px solid black;
+}
+
+.root-cmp nav a:hover {
+    border-block-end: 1px solid black;
+    border-inline-start: 1px solid black;
+}
+

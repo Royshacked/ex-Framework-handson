@@ -1,0 +1,14 @@
+.animals-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1em;
+
+    margin-block-start: 1em;
+    padding: 1em;
+
+    color:whitesmoke;
+    background-color: rgb(162, 10, 10);
+}
