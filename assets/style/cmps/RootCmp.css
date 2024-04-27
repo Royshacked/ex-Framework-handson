@@ -14,12 +14,13 @@
     padding-block: 0.3em;
 }
 
-.root-cmp nav a {
+.root-cmp nav a:not(:last-child) {
     border-inline-end: 1px solid black;
 }
 
 .root-cmp nav a:hover {
-    border-block-end: 1px solid black;
-    border-inline-start: 1px solid black;
+    border-block-end: 1px solid green;
+
+    color:green;
 }
 

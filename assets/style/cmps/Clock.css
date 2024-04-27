@@ -1,0 +1,6 @@
+.clock {
+    margin-block-start: 1em;
+    border:1px solid;
+    padding-inline: 1em;
+    padding-block: 0.2em;
+}
