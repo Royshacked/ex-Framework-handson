@@ -1,0 +1,27 @@
+.count-down article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-block-start: 1em;
+    border: 8px solid blue;
+    padding: 1em;
+
+    background-color: cyan;
+}
+
+.count-down article span {
+    border: 8px solid blue;
+    padding: 1em;
+
+    width: 98%;
+    height: 80%;
+
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.red {
+    color:red;
+}
