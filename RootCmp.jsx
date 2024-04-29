@@ -25,7 +25,7 @@ export function RootCmp() {
 
             {route === 'animals' && <AnimalsIndex/>}
             {route === 'season-clock' && <SeasonClock/>}
-            {route === 'count-down' && <CountDown startFrom={10} onDone={()=> console.log('Done!!')}/>}
+            {route === 'count-down' && <CountDown startFrom={10} onDone={()=> console.log('Done!!')} toTime={Date.now() + 1000*10}/>}
         </main>
     )
 }
