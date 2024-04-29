@@ -14,3 +14,6 @@
 @import "cmps/SeasonClock.css";
 @import "cmps/Clock.css";
 @import "cmps/CountDown.css";
+@import "cmps/WatcherIndex.css";
+@import "cmps/WatchersList.css";
+@import "cmps/WatcherModal.css";

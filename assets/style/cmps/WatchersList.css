@@ -1,0 +1,26 @@
+.watchers-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.watchers-list > div {
+    padding: 1em;
+
+    background-color: whitesmoke;
+}
+
+.watchers-list h3 {
+    border-block-end: 1px solid black;
+    padding: 1em;
+
+    font-weight: bold;
+}
+
+.watchers-list-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+}

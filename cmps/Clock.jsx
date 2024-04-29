@@ -1,11 +1,13 @@
 const { useState, useEffect, useRef } = React
 
 export function Clock({colorClass}) {
-    const [time,setTime] = useState(0)
+    const beginTime = Date.now()
+
+    const [time,setTime] = useState(beginTime)
     const intervalId = useRef()
 
     function startTime() {
-        intervalId.current = setInterval(()=>setTime(prevTime=>prevTime+1),1000)
+        intervalId.current = setInterval(()=>setTime(prevTime=>prevTime+1000),1000)
     }
 
     function stopTime() {
@@ -16,7 +18,9 @@ export function Clock({colorClass}) {
         startTime()
         return stopTime
     },[])
+
+   const clock = new Date(time).toLocaleTimeString()
     
     
-    return <h2 className={`clock ${colorClass}`}>{time}</h2>
+    return <h2 className={`clock ${colorClass}`}>{clock}</h2>
 }

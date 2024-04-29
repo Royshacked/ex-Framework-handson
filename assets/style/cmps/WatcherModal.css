@@ -1,0 +1,23 @@
+.watcher-modal {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+
+    background-color: darkred;
+    color: whitesmoke;
+
+}
+
+.watcher-modal ul {
+    padding: 1em;
+
+    text-align: left;
+    list-style:disc;
+}

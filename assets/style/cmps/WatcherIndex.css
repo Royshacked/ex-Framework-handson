@@ -1,0 +1,49 @@
+.watcher-index {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    height: 70vh;
+
+    margin-block-start: 1em;
+
+    background-color: pink;
+
+    transition: 0.5s;
+}
+
+.watcher-index h2 {
+    font-size: 3em;
+}
+
+.watcher-index .add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watcher-index button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 0.5em;
+
+    font-size: 1em;
+}
+
+/* .back-drop {
+    position: absolute;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: gray;
+
+    z-index:3;
+} */
