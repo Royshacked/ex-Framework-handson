@@ -44,7 +44,7 @@ embed,
 video,
 object {
 	display: block;
-	max-width: 100%;
+	max-width: 50%;
 }
 
 button {

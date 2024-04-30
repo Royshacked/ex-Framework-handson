@@ -6,9 +6,10 @@
     justify-content: space-around;
     text-align: center;
 
-    height: 70vh;
+    height: min-content;
 
     margin-block-start: 1em;
+    padding: 1em;
 
     background-color: pink;
 
