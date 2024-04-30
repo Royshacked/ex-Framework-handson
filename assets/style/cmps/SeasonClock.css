@@ -1,19 +1,8 @@
-.season-clock {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
+.clock {
     margin-block-start: 1em;
-    padding: 1em;
+    border:1px solid;
+    padding-inline: 1em;
+    padding-block: 0.2em;
 
-    background-color: lightblue;
-
-    transition: 1s;
-}
-
-.dark {
-    color:whitesmoke;
-    background-color: darkblue;
-    border-color: whitesmoke;
+    transition: background-color 1s;
 }

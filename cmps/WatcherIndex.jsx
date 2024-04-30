@@ -25,12 +25,14 @@ export function WatcherIndex() {
 
     function onAddWatcher() {
         const watcherId = (`w${+watchers.findLast(watcher=> watcher).id.substring(1)+1}`)
+
         const newWatcher = {
             id: watcherId,
-            fullname: utilService.makeLorem(1),
+            fullname: utilService.firstLetterToUpperCase(utilService.makeLorem(1)),
             movies: [utilService.makeLorem(2),utilService.makeLorem(2)],
             imgUrl: 'w101',
         }
+
         setWatchers(prevWatchers => [...prevWatchers,newWatcher])  
     }
 

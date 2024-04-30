@@ -1,37 +1,26 @@
-import { Clock } from "./Clock.jsx"
-
 const { useState, useEffect, useRef } = React
 
-export function SeasonClock() {
-    const [isDark,setIsDark] = useState(true)
+export function Clock({colorClass}) {
+    const beginTime = Date.now()
 
-    const date = new Date()
-    const monthNum = date.getMonth()
-    const monthAndDayNames = date.toLocaleString('default', {weekday:'long',month:'long'}).split(' ')
-    const season = getSeason()
+    const [time,setTime] = useState(beginTime)
+    const intervalId = useRef()
 
-    function onSetColor() {
-        setIsDark(!isDark)
+    function startTime() {
+        intervalId.current = setInterval(()=>setTime(prevTime=>prevTime+1000),1000)
     }
 
-    function getSeason() {
-        let season=''
-
-        if(monthNum>=9) season = 'Autumn'
-        else if(monthNum>=6) season = 'Summer'
-        else if(monthNum>=3) season = 'Spring'
-        else season = 'Winter'
-
-        return season
+    function stopTime() {
+        clearInterval(intervalId.current)
     }
 
-    const colorClass = isDark? 'dark' : ''
+    useEffect(()=> {
+        startTime()
+        return stopTime
+    },[])
 
-    return <section className={`season-clock ${colorClass}`} onClick={onSetColor}>
-        <h2>{monthAndDayNames[0]} ( {season} )</h2>
-        <img src={`season-imgs/${season.toLowerCase()}.png`} alt="" />
-        <h3>{monthAndDayNames[1]}</h3>
-
-        <Clock colorClass={colorClass}/>
-    </section>
+   const clock = new Date(time).toLocaleTimeString('en-US',{ hour12: false })
+    
+    
+    return <h2 className={`clock ${colorClass}`}>{clock}</h2>
 }

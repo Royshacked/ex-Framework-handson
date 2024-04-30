@@ -6,7 +6,8 @@ export const utilService = {
     getRandomIntInclusive,
     getDayName,
     getMonthName,
-    animateCSS
+    animateCSS,
+    firstLetterToUpperCase
 }
 
 function makeId(length = 6) {
@@ -71,4 +72,8 @@ function animateCSS(el, animation='bounce') {
 
         el.addEventListener('animationend', handleAnimationEnd, { once: true })
     })
+}
+
+function firstLetterToUpperCase(str) {
+    return str.charAt(0).toUpperCase()+str.slice(1)
 }

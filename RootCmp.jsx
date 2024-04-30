@@ -1,6 +1,6 @@
 import { AnimalsIndex } from "./cmps/AnimalsIndex.jsx"
 import { CountDown } from "./cmps/CountDown.jsx"
-import { SeasonClock } from "./cmps/SeasonClock.jsx"
+import { SeasonClock } from "./cmps/SeasonClockIndex.jsx"
 import { WatcherIndex } from "./cmps/WatcherIndex.jsx"
 
 const { useState, useEffect, useRef } = React
