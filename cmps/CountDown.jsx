@@ -5,7 +5,7 @@ export function CountDown({ startFrom, onDone ,toTime}) {
     const intervalId = useRef()
 
     const isCountDone = toTime? (count===toTime-startFrom*1000) : (count===0)
-    const timer = toTime? new Date(count).toLocaleTimeString() : count
+    const timer = toTime? new Date(count).toLocaleTimeString('en-US',{ hour12: false }) : count
     const isTimerRed = toTime? (count <=toTime -0.5*startFrom*1000) : (count <= 0.5*startFrom)
 
     function startCount() {

@@ -19,7 +19,7 @@ export function Clock({colorClass}) {
         return stopTime
     },[])
 
-   const clock = new Date(time).toLocaleTimeString()
+   const clock = new Date(time).toLocaleTimeString('en-US',{ hour12: false })
     
     
     return <h2 className={`clock ${colorClass}`}>{clock}</h2>
