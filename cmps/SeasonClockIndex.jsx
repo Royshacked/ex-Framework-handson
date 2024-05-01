@@ -32,6 +32,6 @@ export function SeasonClock() {
         <img src={`season-imgs/${season.toLowerCase()}.png`} alt="" />
         <h3>{monthAndDayNames[1]}</h3>
 
-        <Clock colorClass={colorClass}/>
+        <Clock/>
     </section>
 }

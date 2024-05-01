@@ -1,6 +1,6 @@
 const { useState, useEffect, useRef } = React
 
-export function Clock({colorClass}) {
+export function Clock() {
     const beginTime = Date.now()
 
     const [time,setTime] = useState(beginTime)
@@ -22,5 +22,5 @@ export function Clock({colorClass}) {
    const clock = new Date(time).toLocaleTimeString('en-US',{ hour12: false })
     
     
-    return <h2 className={`clock ${colorClass}`}>{clock}</h2>
+    return <h2 className={`clock`}>{clock}</h2>
 }

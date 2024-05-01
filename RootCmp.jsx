@@ -1,5 +1,6 @@
 import { AnimalsIndex } from "./cmps/AnimalsIndex.jsx"
 import { CountDown } from "./cmps/CountDown.jsx"
+import { MouseMonitor } from "./cmps/MouseMonitor.jsx"
 import { SeasonClock } from "./cmps/SeasonClockIndex.jsx"
 import { WatcherIndex } from "./cmps/WatcherIndex.jsx"
 
@@ -32,6 +33,8 @@ export function RootCmp() {
             {route === 'season-clock' && <SeasonClock/>}
             {route === 'count-down' && <CountDown startFrom={10} onDone={()=> onDoneCountDown()} toTime={Date.now() + 1000*10}/>}
             {route === 'watcher-app' && <WatcherIndex/>}
+
+            <MouseMonitor/>
         </main>
     )
 }
