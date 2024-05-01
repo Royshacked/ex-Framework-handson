@@ -1,33 +1,41 @@
 const { useState, useEffect, useRef, useCallback } = React
 
 export function MouseMonitor() {
-    const mouseMonitor = {
-        isOn: true,
-        pos: { x: 0, y: 0 }
-    }
-
-    const [mousePos, setMousePos] = useState(mouseMonitor.pos)
-    const [mouse, setMouse] = useState(mouseMonitor)
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+    const [isOn, setIsOn] = useState(true)
 
     function updatePos(ev) {
+        if (!isOn) return
         setMousePos({ ...mousePos, x: ev.pageX, y: ev.pageY })
     }
 
-    function toggleEventListener(isOn) {
-       setMouse({ ...mouse, isOn: !isOn })
-       document.removeEventListener('mousemove', updatePos)
+    function toggleEventListener() {
+        setIsOn(prevIsOn => !prevIsOn)
+    }
+
+    function addMouseListener() {
+        document.addEventListener('mousemove', updatePos)
+    }
+
+    function removeMouseListener() {
+        document.removeEventListener('mousemove', updatePos)
     }
 
     useEffect(() => {
-        document.addEventListener('mousemove', updatePos)
- 
-    },[])
+        if (isOn)
+        addMouseListener()
 
-    const btnStat = mouse.isOn ? 'Pause' : 'Resume'
+        return () => {
+            removeMouseListener()
+        }
+
+    }, [isOn])
+
+    const btnStat = isOn ? 'Pause' : 'Resume'
 
     return <section className="mouse-monitor">
         <h2>Mouse Position</h2>
-        <span>X: {mousePos.x} | Y: {mousePos.y}</span>
-        <button onClick={() => toggleEventListener(mouse.isOn)}>{btnStat}</button>
+        { isOn && (<span>X: {mousePos.x} | Y: {mousePos.y}</span>)}
+        <button onClick={toggleEventListener}>{btnStat}</button>
     </section>
 }
